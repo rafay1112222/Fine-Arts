@@ -1,0 +1,120 @@
+﻿@model Institute_of_Fine_Arts.Models.Competition
+
+@{
+    ViewData["Title"] = "CreateCompetition";
+    Layout = "~/Views/Shared/StaffLayout.cshtml";
+}
+
+
+
+        <div class="row">
+
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Create Competition</h4>
+                <p class="card-description" style="font-size:23px">Competition</p>
+                        <form class="forms-sample" asp-action="CreateCompetition" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label asp-for="Title" class="control-label"></label>
+                                <input asp-for="Title" class="form-control" placeholder="Title"/>
+                                <span asp-validation-for="Title" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Description" class="control-label"></label>
+                                <textarea asp-for="Description" class="form-control" id="exampleText area1" rows="4"></textarea>
+                                <span asp-validation-for="Description" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="StartDate" class="control-label"></label>
+                                <input asp-for="StartDate" class="form-control" />
+                                <span asp-validation-for="StartDate" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="EndDate" class="control-label"></label>
+                                <input asp-for="EndDate" class="form-control" />
+                                <span asp-validation-for="EndDate" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Conditions" class="control-label"></label>
+                                <input asp-for="Conditions" class="form-control" />
+                                <span asp-validation-for="Conditions" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="AwardDetails" class="control-label"></label>
+                                <input asp-for="AwardDetails" class="form-control" />
+                                <span asp-validation-for="AwardDetails" class="text-danger"></span>
+                            </div>
+                           
+                            <div class="form-group">
+                                <label asp-for="ImageFilePath">File upload</label>
+                                <input type="file" name="file" class="form-control">
+                                
+                            </div>
+                            
+                           
+                            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                            <button class="btn btn-dark">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+
+
+@* <h1>CreateCompetition</h1>
+
+<h4>Competition</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateCompetition" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" placeholder="Name"/>
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageFilePath" class="control-label"></label>
+                <input asp-for="ImageFilePath" type="file" name="file" class="form-control" />
+                <span asp-validation-for="ImageFilePath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StartDate" class="control-label"></label>
+                <input asp-for="StartDate" class="form-control" />
+                <span asp-validation-for="StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EndDate" class="control-label"></label>
+                <input asp-for="EndDate" class="form-control" />
+                <span asp-validation-for="EndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Conditions" class="control-label"></label>
+                <input asp-for="Conditions" class="form-control" />
+                <span asp-validation-for="Conditions" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AwardDetails" class="control-label"></label>
+                <input asp-for="AwardDetails" class="form-control" />
+                <span asp-validation-for="AwardDetails" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+ *@

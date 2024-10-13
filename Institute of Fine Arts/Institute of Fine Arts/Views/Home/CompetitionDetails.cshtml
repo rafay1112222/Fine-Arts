@@ -1,0 +1,115 @@
+﻿
+@model Institute_of_Fine_Arts.Models.Competition
+
+@{
+    ViewData["Title"] = "CompetitionDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="section video" data-section="section5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 align-self-center">
+                <div class="left-content">
+                    <span>Competition Details</span>
+                    <h4><em>@Html.DisplayFor(model => model.Title)</em></h4>
+                    <p>
+                        @Html.DisplayFor(model => model.Description)
+                    </p>
+                    <h5 class="text-warning"><em>@Html.DisplayNameFor(model => model.StartDate)</em></h5>
+                    <p>
+                        @Html.DisplayFor(model => model.StartDate)
+                    </p>
+                    <h5 class="text-warning"><em>@Html.DisplayNameFor(model => model.EndDate)</em></h5>
+                    <p>
+                        @Html.DisplayFor(model => model.EndDate)
+                    </p>   
+                    <h5 class="text-warning"><em>@Html.DisplayNameFor(model => model.Conditions)</em></h5>
+                    <p>
+                        @Html.DisplayFor(model => model.Conditions)
+                    </p> 
+                    <h5 class="text-warning"><em>@Html.DisplayNameFor(model => model.AwardDetails)</em></h5>
+                    <p>
+                        @Html.DisplayFor(model => model.AwardDetails)
+                    </p>
+                    <div class="main-button"><a asp-action="Submission" asp-controller="Submission" asp-route-id="@Model?.CompetId">Participate Now</a></div>
+                    <a asp-action="Index">Back to Home</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <article class="video-item">
+                    
+                    <figure>
+                        <img src="@Html.DisplayFor(model => model.ImageFilePath)" style="height:450px;">
+                    </figure>
+                </article>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+
+@* <h1>CompetitionDetails</h1>
+
+<div>
+    <h4>Competition</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ImageFilePath)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ImageFilePath)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Conditions)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Conditions)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AwardDetails)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AwardDetails)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WinnerId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WinnerId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Submission" asp-controller="Submission" asp-route-id="@Model?.CompetId">Participate now</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+ *@

@@ -1,0 +1,63 @@
+﻿@model Institute_of_Fine_Arts.Models.Competition
+
+@{
+    ViewData["Title"] = "EditCompetition";
+    Layout = "~/Views/Shared/StaffLayout.cshtml";
+}
+
+
+        <div class="row">
+
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Edit Competition</h4>
+                <p class="card-description" style="font-size:23px">Edit</p>
+                        <form class="forms-sample" asp-action="EditCompetition" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label asp-for="Title" class="control-label"></label>
+                                <input asp-for="Title" class="form-control" placeholder="Title" />
+                                <span asp-validation-for="Title" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Description" class="control-label"></label>
+                                <textarea asp-for="Description" class="form-control" id="exampleText area1" rows="4"></textarea>
+                                <span asp-validation-for="Description" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="StartDate" class="control-label"></label>
+                                <input asp-for="StartDate" class="form-control" />
+                                <span asp-validation-for="StartDate" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="EndDate" class="control-label"></label>
+                                <input asp-for="EndDate" class="form-control" />
+                                <span asp-validation-for="EndDate" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Conditions" class="control-label"></label>
+                                <input asp-for="Conditions" class="form-control" />
+                                <span asp-validation-for="Conditions" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="AwardDetails" class="control-label"></label>
+                                <input asp-for="AwardDetails" class="form-control" />
+                                <span asp-validation-for="AwardDetails" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="ImageFilePath">File upload</label>
+                                <input type="file" name="file" class="form-control">
+
+                            </div>
+
+
+                            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <a asp-action="ViewCompetition" class="btn btn-outline-info mx-2">Cancel</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+

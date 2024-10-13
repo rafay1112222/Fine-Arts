@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\AA\\Desktop\\eprooject\\Institute of Fine Arts\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{77D6E24A-E947-4772-9C7B-2C794C59C0C5}|Institute of Fine Arts\\Institute of Fine Arts.csproj|c:\\users\\aa\\desktop\\eprooject\\institute of fine arts\\institute of fine arts\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{77D6E24A-E947-4772-9C7B-2C794C59C0C5}|Institute of Fine Arts\\Institute of Fine Arts.csproj|solutionrelative:institute of fine arts\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77D6E24A-E947-4772-9C7B-2C794C59C0C5}|Institute of Fine Arts\\Institute of Fine Arts.csproj|c:\\users\\aa\\desktop\\eprooject\\institute of fine arts\\institute of fine arts\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{77D6E24A-E947-4772-9C7B-2C794C59C0C5}|Institute of Fine Arts\\Institute of Fine Arts.csproj|solutionrelative:institute of fine arts\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77D6E24A-E947-4772-9C7B-2C794C59C0C5}|Institute of Fine Arts\\Institute of Fine Arts.csproj|c:\\users\\aa\\desktop\\eprooject\\institute of fine arts\\institute of fine arts\\controllers\\staffcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77D6E24A-E947-4772-9C7B-2C794C59C0C5}|Institute of Fine Arts\\Institute of Fine Arts.csproj|solutionrelative:institute of fine arts\\controllers\\staffcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\AA\\Desktop\\eprooject\\Institute of Fine Arts\\Institute of Fine Arts\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Institute of Fine Arts\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\AA\\Desktop\\eprooject\\Institute of Fine Arts\\Institute of Fine Arts\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Institute of Fine Arts\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAABYAAAAAAAAAAAAAACsAAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-27T19:03:50.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StaffController.cs",
+              "DocumentMoniker": "C:\\Users\\AA\\Desktop\\eprooject\\Institute of Fine Arts\\Institute of Fine Arts\\Controllers\\StaffController.cs",
+              "RelativeDocumentMoniker": "Institute of Fine Arts\\Controllers\\StaffController.cs",
+              "ToolTip": "C:\\Users\\AA\\Desktop\\eprooject\\Institute of Fine Arts\\Institute of Fine Arts\\Controllers\\StaffController.cs",
+              "RelativeToolTip": "Institute of Fine Arts\\Controllers\\StaffController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFQAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T20:31:48.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\AA\\Desktop\\eprooject\\Institute of Fine Arts\\Institute of Fine Arts\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Institute of Fine Arts\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\AA\\Desktop\\eprooject\\Institute of Fine Arts\\Institute of Fine Arts\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Institute of Fine Arts\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-25T16:43:58.838Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

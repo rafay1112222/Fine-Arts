@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Institute_of_Fine_Arts.Models.Submission>
+
+@{
+    ViewData["Title"] = "MySubmissions";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>MySubmissions</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ImageFilePath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Remarks)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubmissionDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Compet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Std)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImageFilePath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Remarks)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubmissionDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Compet.CompetId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Std.StdId)
+            </td>
+            <td>
+                <a asp-action="EditSubmission" asp-route-id="@item.SubmissionId">Edit</a> |
+           
+                <a asp-action="DeleteSubmission" asp-route-id="@item.SubmissionId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

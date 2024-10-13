@@ -1,0 +1,14 @@
+﻿Scaffold-DbContext "data source=.;initial catalog=dotnetepro;user id=sa;password=aptech; TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+
+
+Scaffold-DbContext "data source=.;initial catalog=dotnetepro;user id=sa;password=aptech; TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -force
+
+
+
+data source=DESKTOP-G0FPI5S\SQLEXPRESS;initial catalog=dotnetepro;user id=sa;password=aptech; TrustServerCertificate=True
+
+
+
+
+Scaffold-DbContext "data source=DESKTOP-G0FPI5S\SQLEXPRESS;initial catalog=dotnetepro;user id=sa;password=aptech; TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -force

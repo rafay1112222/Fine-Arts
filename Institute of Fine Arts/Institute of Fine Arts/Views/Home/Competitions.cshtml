@@ -1,0 +1,115 @@
+﻿@model IEnumerable<Institute_of_Fine_Arts.Models.Competition>
+
+@{
+    ViewData["Title"] = "Competitions";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- ***** Main Banner Area Start ***** -->
+<section class="section main-banner" id="top" data-section="section1">
+    <video autoplay muted loop id="bg-video">
+        <source src="~/assets/images/course-video.mp4" type="video/mp4" />
+    </video>
+
+    <div class="video-overlay header-text">
+        <div class="caption">
+            <h6>The Institute is a thriving center of advanced research and graduate teaching in art history, archaeology, and art conservation.</h6>
+            <h2 data-aos="fade-down" data-aos-duration="3000"><em>Your</em> Classroom</h2>
+            <div class="main-button">
+                <div class="scroll-to-section"><a href="#section2">Discover more</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Main Banner Area End ***** -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="~/assets/comp/styleee.css" />
+
+    <div class="card-list">
+    @foreach (var item in Model)
+    {
+        <a asp-controller="Home" asp-action="CompetitionDetails" asp-route-id="@item.CompetId" class="card-item">
+            <img src="@item.ImageFilePath" alt="Card Image">
+            <h3>@item.Title</h3>
+            <p>@item.AwardDetails</p>
+            <span class="developer">@item.EndDate</span>
+            <div class="arrow">
+                <i class="fas fa-arrow-right card-icon"></i>
+            </div>
+        </a>
+    }
+    </div>
+
+
+@* <h1>Competitions</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImageFilePath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Conditions)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AwardDetails)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Winner)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImageFilePath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Conditions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AwardDetails)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Winner.StdId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CompetId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CompetId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CompetId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+ *@

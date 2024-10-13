@@ -1,0 +1,128 @@
+﻿@model Institute_of_Fine_Arts.Models.Submission
+
+@{
+    ViewData["Title"] = "Submission";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var Compid = Convert.ToInt32(ViewBag.Compid);
+    var stdid = Convert.ToInt32(Context.Session.GetInt32("StudentId"));
+    string msg = ViewBag.msg;
+}
+@if(msg == null)
+{
+    
+
+
+<section class="section coming-soon" data-section="section3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-xs-12">
+                <div class="continer centerIt">
+                       
+                    <div>
+                            
+                        <h4>Take <em>Sub</em>missions</h4>
+                        <div class="counter">
+
+                            <div class="days">
+                                <div class="value">00</div>
+                                <span>Days</span>
+                            </div>
+
+                            <div class="hours">
+                                <div class="value">00</div>
+                                <span>Hours</span>
+                            </div>
+
+                            <div class="minutes">
+                                <div class="value">00</div>
+                                <span>Minutes</span>
+                            </div>
+
+                            <div class="seconds">
+                                <div class="value">00</div>
+                                <span>Seconds</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="right-content">
+                    <div class="top-content">
+                        <h6>Register your free account and <em>get immediate</em> access to online courses</h6>
+                    </div>
+                        <form asp-action="Submission" enctype="multipart/form-data">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                    <input asp-for="CompetId" value="@Compid" type="hidden" class="form-control" />
+                                    <input asp-for="StdId" value="@stdid" type="hidden" class="form-control" />
+                            </div>
+                            <div class="col-md-12">
+                                <fieldset>
+                                        <input asp-for="ImageFilePath" type="file" name="file" class="form-control"/>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-12">
+                                <fieldset>
+                                        <input asp-for="Description" class="form-control" placeholder="Description"/>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-12">
+                                <fieldset>
+                                    <button type="submit" id="form-submit" class="button" >Submit</button>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@*  <h1>Submission</h1>
+
+<h4>Submission</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Submission" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           
+            <div class="form-group">
+               
+                <input asp-for="CompetId" value="@Compid" type="hidden" class="form-control" />
+             
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageFilePath" class="control-label"></label>
+                <input asp-for="ImageFilePath" type="file" name="file" class="form-control" />
+                <span asp-validation-for="ImageFilePath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+           
+            
+           
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+    </div> *@
+}
+else
+{
+    <h1  class="text-center">@msg</h1>
+    
+}

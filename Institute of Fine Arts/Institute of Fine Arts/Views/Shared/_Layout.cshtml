@@ -1,0 +1,164 @@
+﻿﻿@{
+    var StudentName = (Context.Session.GetString("Studentname") != null) ? Context.Session.GetString("Studentname") : "Login";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+
+    <title>Institute of Fine Arts</title>
+    <link rel="shortcut icon" type="images/png" href="~/assets/images/Fine Arts Logo.png" data-aos="fade-up" data-aos-duration="3000">
+    <!-- Bootstrap core CSS -->
+    <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="~/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="~/assets/css/templatemo-grad-school.css">
+    <link rel="stylesheet" href="~/assets/css/owl.css">
+    <link rel="stylesheet" href="~/assets/css/lightbox.css">
+
+    <!-- Aos Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--
+
+    TemplateMo 557 Grad School
+
+    https://templatemo.com/tm-557-grad-school
+
+    -->
+</head>
+
+<body>
+
+
+    <!--header-->
+    <header class="main-header clearfix" role="header">
+        <div class="logo" data-aos="fade-down" data-aos-duration="1500">
+            <a asp-controller="Home" asp-action="Index"><em>Fine</em> Art's</a>
+        </div>
+        <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+        <nav id="menu" class="main-nav" role="navigation">
+            <ul class="main-menu">
+                <li><a asp-controller="Home" asp-action="Index" rel="sponsored" class="external">Home</a></li>
+                <li><a asp-controller="Home" asp-action="Competitions" rel="sponsored" class="external">Competitions</a></li>
+
+                <li><a asp-controller="Home" asp-action="About" rel="sponsored" class="external">About</a></li>
+                
+                
+                <!-- <li><a href="#section5">Video</a></li> -->
+                <li><a asp-controller="Home" asp-action="Contact" rel="sponsored" class="external">Contact</a></li>
+
+                @if (User.Identity.IsAuthenticated)
+                {
+                   
+                    <li class="has-submenu">
+                        <a href="#">@StudentName</a>
+                        <ul class="sub-menu">
+                            <li><a asp-controller="Home" asp-action="MySubmissions" rel="sponsored" class="external">My Submissions</a></li>
+                            <li><a asp-controller="Auth" asp-action="Logout" rel="sponsored" class="external">Log Out</a></li>
+                        </ul>
+                    </li>
+                }
+                else
+                {
+                    <li>
+                        <a asp-controller="Auth" asp-action="Login" rel="sponsored" class="external">Login</a>
+                    </li>
+                }
+            </ul>
+        </nav>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        <i class="fa fa-copyright"></i> Copyright 2024 by Institute of Fine Arts.
+
+                       
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="~/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/assets/js/isotope.min.js"></script>
+    <script src="~/assets/js/owl-carousel.js"></script>
+    <script src="~/assets/js/lightbox.js"></script>
+    <script src="~/assets/js/tabs.js"></script>
+    <script src="~/assets/js/video.js"></script>
+    <script src="~/assets/js/slick-slider.js"></script>
+    <script src="~/assets/js/custom.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+            var
+                direction = section.replace(/#/, ''),
+                reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+                reqSectionPos = reqSection.offset().top - 0;
+
+            if (isAnimate) {
+                $('body, html').animate({
+                    scrollTop: reqSectionPos
+                },
+                    800);
+            } else {
+                $('body, html').scrollTop(reqSectionPos);
+            }
+
+        };
+
+        var checkSection = function checkSection() {
+            $('.section').each(function () {
+                var
+                    $this = $(this),
+                    topEdge = $this.offset().top - 80,
+                    bottomEdge = topEdge + $this.height(),
+                    wScroll = $(window).scrollTop();
+                if (topEdge < wScroll && bottomEdge > wScroll) {
+                    var
+                        currentId = $this.data('section'),
+                        reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+                    reqLink.closest('li').addClass('active').
+                        siblings().removeClass('active');
+                }
+            });
+        };
+
+        $('.main-menu, .scroll-to-section').on('click', 'a', function (e) {
+            if ($(e.target).hasClass('external')) {
+                return;
+            }
+            e.preventDefault();
+            $('#menu').removeClass('active');
+            showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+            checkSection();
+        });
+    </script>
+    
+</body>
+</html>

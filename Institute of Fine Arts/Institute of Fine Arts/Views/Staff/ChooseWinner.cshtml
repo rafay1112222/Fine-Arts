@@ -1,0 +1,157 @@
+﻿@model Institute_of_Fine_Arts.Models.Submission
+
+@{
+    ViewData["Title"] = "ChooseWinner";
+    Layout = "~/Views/Shared/StaffLayout.cshtml";
+}
+<div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h1 class="card-title">ChooseWinner</h1>
+            <p class="card-description">Submissions</p>
+            <div class="row">
+                <div class="col-md-6">
+
+                    <h3 class="text-warning">
+                        @Html.DisplayNameFor(model => model.Description)
+
+                    </h3>
+                    <p class="text-light">
+                        @Html.DisplayFor(model => model.Description)
+
+                    </p>
+                  
+                    
+                    <h3 class="text-warning">
+                        @Html.DisplayNameFor(model => model.Status)
+
+                    </h3>
+
+                    <p class="text-light">
+                        @Html.DisplayFor(model => model.Status)
+
+                    </p>
+                    <h3 class="text-warning">
+                        @Html.DisplayNameFor(model => model.Remarks)
+
+                    </h3>
+
+                    <p class="text-light">
+                        @Html.DisplayFor(model => model.Remarks)
+
+                    </p>
+                    <h3 class="text-warning">
+                        @Html.DisplayNameFor(model => model.SubmissionDate)
+
+                    </h3>
+
+                    <p class="text-light">
+                        @Html.DisplayFor(model => model.SubmissionDate)
+
+                    </p>
+                    <h3 class="text-warning">
+                        @Html.DisplayNameFor(model => model.Compet)
+
+                    </h3>
+
+                    <p class="text-light">
+                        @Html.DisplayFor(model => model.Compet.Title)
+
+                    </p>
+                    <h3 class="text-warning">
+                        @Html.DisplayNameFor(model => model.Std)
+
+                    </h3>
+
+                    <p class="text-light">
+                        @Html.DisplayFor(model => model.Std.StdName)
+
+                    </p>
+
+
+                </div>
+                <div class="col-md-6">
+
+                  
+                    <p class="text-warning">
+                        <img src="@Html.DisplayFor(model => model.ImageFilePath)" style="height:400px;"/>
+
+                    </p>
+                   
+                   
+                    
+
+                </div>
+                <div class="row mt-4">
+                    <div class="col text-center">
+                        <form asp-action="ConfirmWinner" class="d-inline-block">
+                            <input type="hidden" name="sid" value="@Model?.SubmissionId" />
+                            <input type="submit" value="Confirm Winner" class="btn btn-outline-danger mx-2" />
+                        </form>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@* 
+<h1>ChooseWinner</h1>
+
+<div>
+    <h4>Submission</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ImageFilePath)
+        </dt>
+        <dd class = "col-sm-10">
+            <img src="@Html.DisplayFor(model => model.ImageFilePath)" />
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Remarks)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Remarks)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SubmissionDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SubmissionDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Compet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Compet.CompetId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Std)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StdId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <form asp-action="ConfirmWinner">
+        <input type="hidden" name="sid" value="@Model?.SubmissionId" />
+        <input type="submit"  value="Confirm Winner" />
+    </form>
+    <a asp-action="Edit" asp-route-id="@Model?.SubmissionId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+ *@

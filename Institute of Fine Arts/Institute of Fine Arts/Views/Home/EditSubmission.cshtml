@@ -1,0 +1,62 @@
+﻿@model Institute_of_Fine_Arts.Models.Submission
+
+@{
+    ViewData["Title"] = "EditSubmission";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>EditSubmission</h1>
+
+<h4>Submission</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditSubmission" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="SubmissionId" />
+            <div class="form-group">
+                <label asp-for="StdId" class="control-label"></label>
+                <select asp-for="StdId" class="form-control" asp-items="ViewBag.StdId"></select>
+                <span asp-validation-for="StdId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompetId" class="control-label"></label>
+                <select asp-for="CompetId" class="form-control" asp-items="ViewBag.CompetId"></select>
+                <span asp-validation-for="CompetId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageFilePath" class="control-label"></label>
+                <input asp-for="ImageFilePath" class="form-control" />
+                <span asp-validation-for="ImageFilePath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Remarks" class="control-label"></label>
+                <input asp-for="Remarks" class="form-control" />
+                <span asp-validation-for="Remarks" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SubmissionDate" class="control-label"></label>
+                <input asp-for="SubmissionDate" class="form-control" />
+                <span asp-validation-for="SubmissionDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
